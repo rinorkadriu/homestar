@@ -10,9 +10,14 @@ module.exports = {
         highWhite: '#fff',
         highBrown: '#895737',
         lightBrown: '#DAB49D'
+      },
+      borderWidth: {
+        '3': '3px',
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif']
       }
     },
   },
   plugins: [],
 }
-

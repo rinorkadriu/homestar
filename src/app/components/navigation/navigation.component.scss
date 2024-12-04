@@ -1,0 +1,46 @@
+// Import Tailwind colors
+// @import 'tailwindcss/colors';
+
+// Define variables using Tailwind config colors
+$high-brown: theme('colors.highBrown');
+$light-brown: theme('colors.lightBrown');
+
+// Smooth transitions for all interactive elements
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+// Navigation link styles
+a {
+  transition: all 0.3s ease-in-out;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: $high-brown; 
+    transition: width 0.3s ease-in-out;
+  }
+  
+  &:hover {
+    color: $high-brown;
+    
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// Active link style
+.nav-active {
+  color: $high-brown;
+  
+  &::after {
+    display: none; 
+  }
+}

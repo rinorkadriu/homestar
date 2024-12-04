@@ -1,34 +1,69 @@
 <header class="bg-black text-white">
-    <nav class="container mx-auto p-4">
-      <div class="flex justify-between items-center">
-        <!-- Logo or Brand -->
-        <div class="text-xl font-semibold">
-          <a href="/" class="hover:text-gray-400">My Logo</a>
-        </div>
-  
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8">
-          <a href="#" class="hover:text-gray-400">Home</a>
-          <a href="#services" class="hover:text-gray-400">Services</a>
-          <a href="#about" class="hover:text-gray-400">About</a>
-          <a href="#contact" class="hover:text-gray-400">Contact</a>
-        </div>
-  
-        <!-- Mobile Menu Button -->
-        <button (click)="toggleMenu()" class="md:hidden text-white focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+  <nav class="container mx-auto p-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo or Brand -->
+      <div class="text-xl font-semibold">
+        <a href="/" class="hover:text-gray-400">My Logo</a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8">
+        <a routerLink="/" routerLinkActive="nav-active font-bold" [routerLinkActiveOptions]="{exact: true}" 
+           class="hover:text-lightBrown relative py-2">Ballina</a>
+        <a routerLink="/services" routerLinkActive="nav-active font-bold" 
+           class="hover:text-lightBrown relative py-2">Rreth nesh</a>
+        <a routerLink="/about" routerLinkActive="nav-active font-bold" 
+           class="hover:text-lightBrown relative py-2">Personeli</a>
+        <a routerLink="/contact" routerLinkActive="nav-active font-bold" 
+           class="hover:text-lightBrown relative py-2">Sherbimet</a>
+        <a routerLink="/kontakt" routerLinkActive="nav-active font-bold" 
+           class="hover:text-lightBrown relative py-2">Kontakti</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button (click)="toggleMenu()" class="md:hidden text-white focus:outline-none">
+        <div class="relative w-6 h-6">
+          <!-- Hamburger Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" 
+            class="h-6 w-6 absolute transition-all duration-300 ease-in-out"
+            [class.opacity-0]="isMenuOpen"
+            [class.opacity-100]="!isMenuOpen"
+            fill="none" stroke="currentColor"
+            viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-        </button>
+          <!-- X Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" 
+            class="h-6 w-6 absolute transition-all duration-300 ease-in-out"
+            [class.opacity-0]="!isMenuOpen"
+            [class.opacity-100]="isMenuOpen"
+            fill="none" stroke="currentColor"
+            viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden overflow-hidden transition-all duration-300 ease-in-out"
+      [ngStyle]="{
+        'max-height': isMenuOpen ? '400px' : '0',
+        'opacity': isMenuOpen ? '1' : '0',
+        'visibility': isMenuOpen ? 'visible' : 'hidden'
+      }">
+      <div class="bg-gray-700 p-4">
+        <a routerLink="/" routerLinkActive="nav-active font-bold" [routerLinkActiveOptions]="{exact: true}" 
+           class="block py-2 text-white hover:text-lightBrown relative">Ballina</a>
+        <a routerLink="/services" routerLinkActive="nav-active font-bold" 
+           class="block py-2 text-white hover:text-lightBrown relative">Rreth nesh</a>
+        <a routerLink="/about" routerLinkActive="nav-active font-bold" 
+           class="block py-2 text-white hover:text-lightBrown relative">Personeli</a>
+        <a routerLink="/contact" routerLinkActive="nav-active font-bold" 
+           class="block py-2 text-white hover:text-lightBrown relative">Sherbimet</a>
+        <a routerLink="/kontakt" routerLinkActive="nav-active font-bold" 
+           class="block py-2 text-white hover:text-lightBrown relative">Kontakti</a>
       </div>
-  
-      <!-- Mobile Menu -->
-      <div [ngClass]="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="md:hidden bg-gray-700 p-4">
-        <a href="#" class="block py-2 text-white hover:text-gray-400">Home</a>
-        <a href="#services" class="block py-2 text-white hover:text-gray-400">Services</a>
-        <a href="#about" class="block py-2 text-white hover:text-gray-400">About</a>
-        <a href="#contact" class="block py-2 text-white hover:text-gray-400">Contact</a>
-      </div>
-    </nav>
-  </header>
-  
+    </div>
+  </nav>
+</header>
