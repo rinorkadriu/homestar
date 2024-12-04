@@ -12,8 +12,18 @@ $light-brown: theme('colors.lightBrown');
   transition-duration: 300ms;
 }
 
+// Remove hover effects for logo
+.text-xl a {
+  &::after {
+    display: none;
+  }
+  &:hover {
+    color: inherit;
+  }
+}
+
 // Navigation link styles
-a {
+nav a {
   transition: all 0.3s ease-in-out;
   
   &::after {

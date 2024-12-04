@@ -1,68 +1,79 @@
-<header class="bg-black text-white">
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+         [ngClass]="{'bg-highWhite text-lowBlack shadow-lg': isScrolled, 'bg-lowBlack text-highWhite': !isScrolled}">
   <nav class="container mx-auto p-4">
     <div class="flex justify-between items-center">
       <!-- Logo or Brand -->
-      <div class="text-xl font-semibold">
-        <a href="/" class="hover:text-gray-400">My Logo</a>
+      <div class="text-xl font-semibold"> 
+        <a href="/">My Logo</a>
       </div>
 
-      <!-- Desktop Menu -->
+      <!-- Desktop Navigation -->
       <div class="hidden md:flex space-x-8">
         <a routerLink="/" routerLinkActive="nav-active font-bold" [routerLinkActiveOptions]="{exact: true}" 
-           class="hover:text-lightBrown relative py-2">Ballina</a>
+           class="hover:text-lightBrown relative transition-colors duration-200">Ballina</a>
         <a routerLink="/services" routerLinkActive="nav-active font-bold" 
-           class="hover:text-lightBrown relative py-2">Rreth nesh</a>
+           class="hover:text-lightBrown relative transition-colors duration-200">Rreth nesh</a>
         <a routerLink="/about" routerLinkActive="nav-active font-bold" 
-           class="hover:text-lightBrown relative py-2">Personeli</a>
+           class="hover:text-lightBrown relative transition-colors duration-200">Personeli</a>
         <a routerLink="/contact" routerLinkActive="nav-active font-bold" 
-           class="hover:text-lightBrown relative py-2">Sherbimet</a>
+           class="hover:text-lightBrown relative transition-colors duration-200">Sherbimet</a>
         <a routerLink="/kontakt" routerLinkActive="nav-active font-bold" 
-           class="hover:text-lightBrown relative py-2">Kontakti</a>
+           class="hover:text-lightBrown relative transition-colors duration-200">Kontakti</a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button (click)="toggleMenu()" class="md:hidden text-white focus:outline-none">
+      <button (click)="toggleMenu()" class="md:hidden focus:outline-none">
         <div class="relative w-6 h-6">
           <!-- Hamburger Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" 
-            class="h-6 w-6 absolute transition-all duration-300 ease-in-out"
-            [class.opacity-0]="isMenuOpen"
-            [class.opacity-100]="!isMenuOpen"
-            fill="none" stroke="currentColor"
-            viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+               [class.hidden]="isMenuOpen" 
+               class="h-6 w-6" 
+               fill="none" 
+               viewBox="0 0 24 24" 
+               stroke="currentColor">
+            <path stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
-          <!-- X Icon -->
+          
+          <!-- Close Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" 
-            class="h-6 w-6 absolute transition-all duration-300 ease-in-out"
-            [class.opacity-0]="!isMenuOpen"
-            [class.opacity-100]="isMenuOpen"
-            fill="none" stroke="currentColor"
-            viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+               [class.hidden]="!isMenuOpen" 
+               class="h-6 w-6" 
+               fill="none" 
+               viewBox="0 0 24 24" 
+               stroke="currentColor">
+            <path stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </div>
       </button>
     </div>
 
     <!-- Mobile Menu -->
-    <div class="md:hidden overflow-hidden transition-all duration-300 ease-in-out"
-      [ngStyle]="{
-        'max-height': isMenuOpen ? '400px' : '0',
-        'opacity': isMenuOpen ? '1' : '0',
-        'visibility': isMenuOpen ? 'visible' : 'hidden'
+    <div class="md:hidden transition-all duration-300 ease-in-out" 
+         [class.opacity-100]="isMenuOpen" 
+         [class.opacity-0]="!isMenuOpen" 
+         [class.h-0]="!isMenuOpen" 
+         [class.h-auto]="isMenuOpen" 
+         [class.overflow-hidden]="!isMenuOpen" 
+         [ngStyle]="{
+           'pointer-events': isMenuOpen ? 'auto' : 'none'
       }">
-      <div class="bg-gray-700 p-4">
+      <div class="bg-lowBlack text-highWhite p-4 mt-4 rounded-lg">
         <a routerLink="/" routerLinkActive="nav-active font-bold" [routerLinkActiveOptions]="{exact: true}" 
-           class="block py-2 text-white hover:text-lightBrown relative">Ballina</a>
+           class="block py-2 hover:text-lightBrown relative transition-colors duration-200">Ballina</a>
         <a routerLink="/services" routerLinkActive="nav-active font-bold" 
-           class="block py-2 text-white hover:text-lightBrown relative">Rreth nesh</a>
+           class="block py-2 hover:text-lightBrown relative transition-colors duration-200">Rreth nesh</a>
         <a routerLink="/about" routerLinkActive="nav-active font-bold" 
-           class="block py-2 text-white hover:text-lightBrown relative">Personeli</a>
+           class="block py-2 hover:text-lightBrown relative transition-colors duration-200">Personeli</a>
         <a routerLink="/contact" routerLinkActive="nav-active font-bold" 
-           class="block py-2 text-white hover:text-lightBrown relative">Sherbimet</a>
+           class="block py-2 hover:text-lightBrown relative transition-colors duration-200">Sherbimet</a>
         <a routerLink="/kontakt" routerLinkActive="nav-active font-bold" 
-           class="block py-2 text-white hover:text-lightBrown relative">Kontakti</a>
+           class="block py-2 hover:text-lightBrown relative transition-colors duration-200">Kontakti</a>
       </div>
     </div>
   </nav>

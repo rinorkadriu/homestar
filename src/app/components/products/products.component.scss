@@ -1,0 +1,30 @@
+.products-section {
+    .product-card {
+        transition: transform 0.3s ease-in-out;
+        
+        img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+    }
+}
+
+// Custom scrollbar for the section
+.products-section {
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #1a1a1a;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #895737;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #DAB49D;
+    }
+}
