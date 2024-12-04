@@ -1,11 +1,20 @@
 .products-section {
     .product-card {
         transition: transform 0.3s ease-in-out;
+        max-width: 90%;
+        margin: 0 auto;
         
         img {
             transition: transform 0.3s ease-in-out;
         }
 
+        .text-center {
+            margin-top: 1.25rem;
+            
+            .space-y-1 > * {
+                margin-top: 0.5rem;
+            }
+        }
     }
 }
 
