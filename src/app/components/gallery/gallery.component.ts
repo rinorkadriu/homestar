@@ -1,0 +1,26 @@
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-gallery',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './gallery.component.html',
+  styleUrl: './gallery.component.scss'
+})
+export class GalleryComponent {
+
+  images = [
+    { src: '/Kitchen_1.JPG', alt: 'Kuzhine speciale', caption: 'Kuzhine speciale' },
+    { src: '/Kitchen_2.JPG', alt: 'Kuzhine speciale', caption: 'Kuzhine speciale' },
+    { src: '/Kitchen_12.JPG', alt: 'Kuzhine speciale', caption: 'Kuzhine speciale' },
+    { src: '/Kitchen_4.JPG', alt: 'Kuzhine speciale', caption: 'Kuzhine speciale' },
+    { src: '/Kitchen_8.jpg', alt: 'Kuzhine speciale', caption: 'Kuzhine speciale' },
+    { src: '/Kitchen_9.jpg', alt: 'Kuzhine speciale', caption: 'Kuzhine speciale' },
+    { src: '/Office_1.jpeg', alt: 'Office 1', caption: 'Modern Office 1' },
+    { src: '/Office_2.jpeg', alt: 'Office 1', caption: 'Modern Office 1' },
+    { src: '/Office_3.jpg', alt: 'Office 1', caption: 'Modern Office 1' },
+    // Add more images as needed
+  ];
+
+}
