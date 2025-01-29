@@ -63,6 +63,8 @@ $light-brown: theme('colors.lightBrown');
     margin: 0.25rem;
     border-radius: 0.5rem;
     transition: background-color 0.2s ease;
+    color: unset;
+    text-decoration: none;
     
     &.nav-active {
       background-color: $high-brown;

@@ -3,22 +3,22 @@
   <nav class="container mx-auto px-4 py-3">
     <div class="flex justify-between items-center">
       <!-- Logo or Brand -->
-      <div class="text-xl font-semibold relative z-20"> 
-        <a href="/">My Logo</a>
+      <div class=""> 
+        <p class="text-1xl font-weight-500 text-highWhite" [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">HomeStar Furniture</p>
       </div>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex space-x-8">
         <a routerLink="/" routerLinkActive="nav-active font-bold" [routerLinkActiveOptions]="{exact: true}" 
-           class="hover:text-lightBrown relative transition-colors duration-200">Ballina</a>
+           class="hover:text-lightBrown  text-highWhite no-underline relative transition-colors duration-200" [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">Ballina</a>
         <a routerLink="/services" routerLinkActive="nav-active font-bold" 
-           class="hover:text-lightBrown relative transition-colors duration-200">Rreth nesh</a>
+           class="hover:text-lightBrown text-highWhite no-underline relative transition-colors duration-200" [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">Rreth nesh</a>
         <a routerLink="/about" routerLinkActive="nav-active font-bold" 
-           class="hover:text-lightBrown relative transition-colors duration-200">Personeli</a>
+           class="hover:text-lightBrown text-highWhite no-underline relative transition-colors duration-200" [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">Personeli</a>
         <a routerLink="/contact" routerLinkActive="nav-active font-bold" 
-           class="hover:text-lightBrown relative transition-colors duration-200">Sherbimet</a>
+           class="hover:text-lightBrown text-highWhite no-underline relative transition-colors duration-200" [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">Sherbimet</a>
         <a routerLink="/kontakt" routerLinkActive="nav-active font-bold" 
-           class="hover:text-lightBrown relative transition-colors duration-200">Kontakti</a>
+           class="hover:text-lightBrown text-highWhite no-underline relative transition-colors duration-200" [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">Kontakti</a>
       </div>
 
       <!-- Mobile Menu Button -->

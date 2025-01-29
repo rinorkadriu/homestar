@@ -3,11 +3,14 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
 import { HomeBannerComponent } from "../../components/home-banner/home-banner.component";
 import { ProductsComponent } from '../../components/products/products.component';
 import { GalleryComponent } from '../../components/gallery/gallery.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { SliderComponent } from '../../components/slider/slider.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [NavigationComponent, HomeBannerComponent, ProductsComponent, GalleryComponent],
+  imports: [NavigationComponent, HomeBannerComponent,
+     ProductsComponent, GalleryComponent, FooterComponent, SliderComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
