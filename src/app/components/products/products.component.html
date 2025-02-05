@@ -2,8 +2,7 @@
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
             <!-- Product 1 -->
-            <div class="product-card relative w-full group animate__animated" 
-            [ngClass]="{'animate__fadeInLeft': productVisible[0]}">
+            <div class="product-card relative w-full group">
            <div class="aspect-[6/7] bg-lowBlack rounded-lg overflow-hidden relative">
                <div class="w-full h-full p-6 relative">
                    <img src="/chair.jpeg" alt="Dhoma e gjumit"
@@ -25,7 +24,7 @@
        </div>
 
             <!-- Product 2 -->
-            <div class="product-card relative w-full group animate__animated" [ngClass]="{'animate__fadeInDown': productVisible[1]}">
+            <div class="product-card relative w-full group">
                 <div class="aspect-[6/7] bg-lowBlack rounded-lg overflow-hidden relative">
                     <div class="w-full h-full p-6 relative">
                         <img src="/kitchen.jpg" alt="Kuzhina"
@@ -51,8 +50,7 @@
             </div>
 
             <!-- Right Content -->
-            <div class="text-left space-y-4 lg:pl-8 home-star-section animate__animated" 
-            [ngClass]="{'animate__fadeInRight': homeStarVisible}">
+            <div class="text-left space-y-4 lg:pl-8 home-star-section">
                 <h2 class="text-6xl font-light">HomeStar</h2>
                 <p class="text-gray-400 text-lg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec quam sed mi facilisis pharetra.
@@ -72,8 +70,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center mt-16">
             <!-- Right Content -->
-            <div class="text-left space-y-4 lg:pl-8 home-star-section animate__animated" 
-            [ngClass]="{'animate__fadeInRight': homeStarVisible}">
+            <div class="text-left space-y-4 lg:pl-8 home-star-section">
                 <h2 class="text-6xl font-light">HomeStar</h2>
                 <p class="text-gray-400 text-lg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec quam sed mi facilisis pharetra.
