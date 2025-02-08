@@ -1,54 +1,17 @@
-<div class="slider-section flex flex-wrap bg-lowBlack pt-8 pb-8">
-    <div class="slider w-full lg:w-1/2 relative overflow-hidden">
-        <div class="slides flex transition-transform duration-300" [ngStyle]="{'transform': 'translateX(' + (-currentIndex * 100) + '%)'}">
-            <div class="slide w-full flex-shrink-0">
-                <img src="/Kitchen_1.JPG" alt="Image 1" class="w-full h-full object-cover">
-                <div class="caption absolute bottom-0 left-0 right-0 bg-highBrown text-white p-2">
-                    <p>Beautiful Kitchen Design 1</p>
-                </div>
-            </div>
-            <div class="slide w-full flex-shrink-0">
-                <img src="/Kitchen_2.JPG" alt="Image 2" class="w-full h-full object-cover">
-                <div class="caption absolute bottom-0 left-0 right-0 bg-highBrown text-white p-2">
-                    <p>Beautiful Kitchen Design 2</p>
-                </div>
-            </div>
-            <div class="slide w-full flex-shrink-0">
-                <img src="/Kitchen_12.JPG" alt="Image 3" class="w-full h-full object-cover">
-                <div class="caption absolute bottom-0 left-0 right-0 bg-highBrown text-white p-2">
-                    <p>Beautiful Kitchen Design 3</p>
-                </div>
-            </div>
-        </div>
-        <button (click)="prevSlide()" class="absolute left-0 top-1/2 text-1xl transform bg-highBrown -translate-y-1/2 text-highWhite p-2">❮</button>
-        <button (click)="nextSlide()" class="absolute right-0 top-1/2 transform text-1xl bg-highBrown -translate-y-1/2 text-highWhite p-2">❯</button>
-        
-        <div class="indicators flex justify-center mt-2">
-            <span *ngFor="let image of images; let i = index" 
-                  (click)="currentIndex = i" 
-                  [class.active]="i === currentIndex" 
-                  class="indicator w-3 h-3 bg-highBrown rounded-full mx-1 cursor-pointer"></span>
-        </div>
-    </div>
-
-    <div class="text-content w-full lg:w-1/2 lg:pl-8 mt-6 lg:mt-0 flex flex-col justify-center px-4"> <!-- Added padding for mobile -->
-        <p class="text-gray-400 text-lg mt-2">
-            Discover our exquisite range of furniture designed to elevate your home. Quality craftsmanship meets modern aesthetics.
-        </p>
-        
-        <div class="flex space-x-4 mt-6">
-            <div class="flex items-center">
-                <i class="fas fa-check-circle text-highBrown"></i>
-                <span class="ml-2 text-1xl text-highWhite">100% Quality Guarantee</span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-leaf text-highBrown"></i>
-                <span class="ml-2 text-1xl text-highWhite">Sustainable Materials</span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-headset text-highBrown"></i>
-                <span class="ml-2 text-1xl text-highWhite">24/7 Customer Support</span>
-            </div>
+<div class="company-history-section w-full bg-cover h-screen bg-center relative" style="background-image: url('/history.jpg');">
+    <div class="overlay absolute inset-0 bg-highBlack bg-opacity-70"></div> 
+    <div class="flex items-center justify-center h-full relative z-10"> 
+        <div class="text-center w-full max-w-7xl px-4 py-6"> <!-- Added padding for top and bottom -->
+            <h2 class="history-title text-3xl md:text-4xl font-bold text-gray-200 mb-4">Home Star Furniture - Company History</h2>
+            <p class="history-text text-gray-200 text-base md:text-lg mb-4"> <!-- Smaller text for mobile -->
+                Founded in 2009, Home Star Furniture has been a leading manufacturer of high-quality furniture, specializing in kitchens, doors, dressers, and wall cladding. With a commitment to craftsmanship, innovation, and customer satisfaction, we have built a strong reputation for delivering durable and stylish furniture solutions.
+            </p>
+            <p class="history-text text-gray-200 text-base md:text-lg mb-4">
+                Our journey began with a passion for woodworking and a vision to provide homes with functional and elegant furniture. Over the years, we have expanded our expertise, incorporating modern technology and premium materials to meet the evolving needs of our clients. Whether it’s a custom-designed kitchen, a beautifully crafted door, or sophisticated wall cladding, our products reflect precision and excellence.
+            </p>
+            <p class="history-text text-gray-200 text-base md:text-lg">
+                At Home Star Furniture, we take pride in our craftsmanship and dedication to creating timeless furniture pieces that enhance living spaces.
+            </p>
         </div>
     </div>
 </div>
