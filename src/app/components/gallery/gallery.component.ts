@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 })
 export class GalleryComponent {
 
+  selectedTab: number = 0; // Default to the first tab
+
   images = [
     { src: '/Kitchen_1.JPG', alt: 'Kuzhine speciale', caption: 'Kuzhine speciale' },
     { src: '/Kitchen_2.JPG', alt: 'Kuzhine speciale', caption: 'Kuzhine speciale' },
@@ -22,5 +24,19 @@ export class GalleryComponent {
     { src: '/Office_3.jpg', alt: 'Office 1', caption: 'Modern Office 1' },
     // Add more images as needed
   ];
+
+  imagesTab1 = this.images.slice(0, 4); // First 4 images
+  imagesTab2 = this.images.slice(2, 6); // Next 4 images
+  imagesTab3 = this.images.slice(4, 8); // Next 4 images
+  imagesTab4 = this.images.slice(1, 5);; // You can fill this with additional images if available
+  imagesTab5 = this.images.slice(3, 7);; // You can fill this with additional images if available
+
+  selectTab(index: number) {
+    this.selectedTab = index; // Change the selected tab
+  }
+
+  isVisible(tabIndex: number, imageIndex: number): boolean {
+    return this.selectedTab === tabIndex; // Return true if the tab is selected
+  }
 
 }
