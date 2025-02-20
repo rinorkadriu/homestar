@@ -10,6 +10,7 @@ module.exports = {
         highWhite: '#fff',
         highBrown: '#895737',
         lightBrown: '#DAB49D',
+        galleryBrown: '#bfc9ca',
         lowBlack: '#1b1b1b',
         lowWhite: '#f1f1f1',
         blackBacground: '#131312'
