@@ -28,7 +28,25 @@
 
 .doors {
   img {
-    max-width: 700px;
-    max-height: 600px;
+    max-height: 550px;
   }
+}
+
+/* Ensure images fill the container */
+.slide img {
+  width: 100%;
+  height: auto; /* Adjust height based on image aspect ratio */
+  object-fit: cover;
+}
+
+/* Set a fixed height for the image container to maintain consistent size */
+
+/* Position arrows on top */
+button {
+  z-index: 10;
+}
+
+/* Optional: Add a slight hover effect on the arrows for better UI */
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
