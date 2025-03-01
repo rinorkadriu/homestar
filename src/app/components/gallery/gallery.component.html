@@ -1,116 +1,33 @@
-<!-- <div class="gallery-section bg-lowBlack pt-12 pb-12">
-  <div class="tabs flex justify-center mb-4 text-highWhite text-bold">
-    <div class="tab cursor-pointer pl-6 pr-6 pt-2 pb-2 rounded"
-      *ngFor="let tab of ['All', 'Kitchen', 'Doors', 'Wall cladding', 'Bedroom']; let i = index"
-      [class.text-white]="selectedTab === i" 
-      [class.border-b-4]="selectedTab === i" [class.border-highBrown]="selectedTab === i" (click)="selectTab(i)">
-      {{ tab }}
-    </div>
-  </div>
-
-  <div class="tab-content">
-    <div *ngIf="selectedTab === 0" class="gallery grid grid-cols-4">
-      <div class="relative w-1/4 group" *ngFor="let image of imagesTab1">
-        <img [src]="image.src" [alt]="image.alt" loading="lazy"
-          class="w-full max-w-380 max-h-96 h-full transition-transform duration-300 transform" />
-        <div
-          class="absolute bottom-0 bg-highBrown bg-opacity-90 text-white w-full text-center p-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-          {{ image.caption }}
+<div class="bg-product-section relative">
+  <div class="absolute inset-0 bg-black opacity-80"></div> <!-- Overlay -->
+  <div class="container mx-auto py-8 relative z-10"> <!-- Ensure content is above overlay -->
+    <div class="flex flex-col md:flex-row items-center">
+        <div class="overflow-hidden rounded-lg shadow-lg md:w-1/2">
+            <img src="/Shelf_4.jpeg" alt="Product Image" class="w-full h-100 object-cover">
         </div>
-      </div>
-    </div>
-
-    <div *ngIf="selectedTab === 1" class="gallery grid grid-cols-4">
-      <div class="relative w-1/4 group" *ngFor="let image of imagesTab2">
-        <img [src]="image.src" [alt]="image.alt" loading="lazy"
-          class="w-full max-w-380 max-h-96 h-full transition-transform duration-300 transform" />
-        <div
-          class="absolute bottom-0 bg-highBrown bg-opacity-90 text-white w-full text-center p-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-          {{ image.caption }}
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="selectedTab === 2" class="gallery grid grid-cols-4">
-      <div class="relative w-1/4 group" *ngFor="let image of imagesTab3">
-        <img [src]="image.src" [alt]="image.alt" loading="lazy"
-          class="w-full max-w-380 max-h-96 h-full transition-transform duration-300 transform" />
-        <div
-          class="absolute bottom-0 bg-highBrown bg-opacity-90 text-white w-full text-center p-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-          {{ image.caption }}
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="selectedTab === 3" class="gallery grid grid-cols-4">
-      <div class="relative w-1/4 group" *ngFor="let image of imagesTab4">
-        <img [src]="image.src" [alt]="image.alt" loading="lazy"
-          class="w-full max-w-380 max-h-96 h-full transition-transform duration-300 transform" />
-        <div
-          class="absolute bottom-0 bg-highBrown bg-opacity-90 text-white w-full text-center p-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-          {{ image.caption }}
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="selectedTab === 4" class="gallery grid grid-cols-4">
-      <div class="relative w-1/4 group" *ngFor="let image of imagesTab5">
-        <img [src]="image.src" [alt]="image.alt" loading="lazy"
-          class="w-full max-w-380 max-h-96 h-full transition-transform duration-300 transform" />
-        <div
-          class="absolute bottom-0 bg-highBrown bg-opacity-90 text-white w-full text-center p-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-          {{ image.caption }}
-        </div>
+        <div class="md:w-1/2 md:ml-6 mt-4 md:mt-0">
+          <h3 class="text-xl font-semibold mb-2 text-white">Stylish Storage Shelf</h3>
+          <p class="text-gray-200">
+              Discover the perfect blend of style and functionality with our Stylish Storage Shelf. Designed to enhance any room, this versatile shelf provides ample space for books, decor, and personal treasures. Made from high-quality materials, it ensures durability while adding a modern touch to your home. Whether in the living room, office, or bedroom, this shelf is an ideal solution for organizing and displaying your favorite items. Elevate your space with this elegant storage solution that complements your unique style.
+          </p>
       </div>
     </div>
   </div>
 </div>
 
- -->
-
- <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-galleryBrown">
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Kitchen_1.JPG" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/IMG_DOOR_3.jpg" alt="Modern Office 1">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Bedroom_1.JPG" alt="Modern Office 1">
-      </div>
-  </div>
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Kitchen_4.JPG" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/IMG_DOOR_2.jpg" alt="Modern Office 1">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Bedroom_3.JPG" alt="Modern Office 1">
-      </div>
-  </div>
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Kitchen_1.JPG" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/IMG_DOOR_1.JPG" alt="Modern Office 1">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Bedroom_5.jpeg" alt="Modern Office 1">
-      </div>
-  </div>
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Kitchen_2.JPG" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Door_2.jpg" alt="Modern Office 1">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="/Bedroom_6.JPG" alt="Modern Office 1">
+<div class="bg-sc-product-section relative">
+  <div class="absolute inset-0 bg-black opacity-80"></div> <!-- Overlay -->
+  <div class="container mx-auto py-8 relative z-10"> <!-- Ensure content is above overlay -->
+      <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 md:mr-6">
+              <h3 class="text-xl font-semibold mb-2 text-white">Elegant Display Shelf</h3>
+              <p class="text-gray-200">
+                  Transform your living space with our Elegant Display Shelf. This beautifully crafted shelf not only serves as a functional storage solution but also as a stunning piece of decor. Its sleek lines and modern design make it a perfect fit for any room. Use it to showcase your favorite books, plants, or decorative items, and enjoy the perfect blend of style and practicality.
+              </p>
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-lg md:w-1/2">
+              <img src="/Kitchen_6.JPG" alt="Elegant Display Shelf" class="w-full h-100 object-cover rounded-lg shadow-lg">
+          </div>
       </div>
   </div>
 </div>
