@@ -12,3 +12,8 @@
   background-repeat: no-repeat;
   padding: 20px; // Optional: Adjust padding if needed
 }
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}

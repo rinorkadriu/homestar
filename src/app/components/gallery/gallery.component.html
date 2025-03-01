@@ -2,15 +2,36 @@
   <div class="absolute inset-0 bg-black opacity-80"></div> <!-- Overlay -->
   <div class="container mx-auto py-8 relative z-10"> <!-- Ensure content is above overlay -->
     <div class="flex flex-col md:flex-row items-center">
-        <div class="overflow-hidden rounded-lg shadow-lg md:w-1/2">
-            <img src="/Shelf_4.jpeg" alt="Product Image" class="w-full h-100 object-cover">
+      <div class="md:w-1/2 overflow-hidden">
+        <div class="relative w-full overflow-hidden">
+          <div #slider class="flex transition-transform duration-500">
+            <div class="slide w-full flex-shrink-0">
+              <img src="/Office_1.jpeg" alt="Image 1" class="max-w-[750px] h-100 object-cover">
+            </div>
+            <div class="slide w-full flex-shrink-0">
+              <img src="/Office_3.jpg" alt="Image 1" class="max-w-[750px] h-100 object-cover">
+            </div>  
+            <div class="slide w-full flex-shrink-0">
+              <img src="/Shelf_4.jpeg" alt="Image 2" class="max-w-[750px] h-100 object-cover">
+            </div>
+          </div>
+
+          <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-transparent text-white p-2"
+            (click)="moveSlide(-1)">
+            &#10094;
+          </button>
+          <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-transparent text-white p-2"
+            (click)="moveSlide(1)">
+            &#10095;
+          </button>
         </div>
-        <div class="md:w-1/2 md:ml-6 mt-4 md:mt-0">
-          <h3 class="text-xl font-semibold mb-2 text-white">Stylish Storage Shelf</h3>
-          <p class="text-gray-200">
-              Discover the perfect blend of style and functionality with our Stylish Storage Shelf. Designed to enhance any room, this versatile shelf provides ample space for books, decor, and personal treasures. Made from high-quality materials, it ensures durability while adding a modern touch to your home. Whether in the living room, office, or bedroom, this shelf is an ideal solution for organizing and displaying your favorite items. Elevate your space with this elegant storage solution that complements your unique style.
-          </p>
       </div>
+      <div class="md:w-1/2 md:ml-6 mt-4 md:mt-0">
+        <h3 class="text-xl font-semibold mb-2 text-white">Elegant Office</h3>
+        <p class="text-gray-200">
+          Create a professional and stylish workspace with our Elegant Office designs. Thoughtfully crafted for comfort and productivity, our offices feature modern layouts, high-quality materials, and smart storage solutions. Whether for a home office or corporate space, our designs offer the perfect blend of functionality and aesthetics to enhance your work environment.
+        </p>
+    </div>
     </div>
   </div>
 </div>
@@ -18,16 +39,19 @@
 <div class="bg-sc-product-section relative">
   <div class="absolute inset-0 bg-black opacity-80"></div> <!-- Overlay -->
   <div class="container mx-auto py-8 relative z-10"> <!-- Ensure content is above overlay -->
-      <div class="flex flex-col md:flex-row items-center">
-          <div class="md:w-1/2 md:mr-6">
-              <h3 class="text-xl font-semibold mb-2 text-white">Elegant Display Shelf</h3>
-              <p class="text-gray-200">
-                  Transform your living space with our Elegant Display Shelf. This beautifully crafted shelf not only serves as a functional storage solution but also as a stunning piece of decor. Its sleek lines and modern design make it a perfect fit for any room. Use it to showcase your favorite books, plants, or decorative items, and enjoy the perfect blend of style and practicality.
-              </p>
-          </div>
-          <div class="overflow-hidden rounded-lg shadow-lg md:w-1/2">
-              <img src="/Kitchen_6.JPG" alt="Elegant Display Shelf" class="w-full h-100 object-cover rounded-lg shadow-lg">
-          </div>
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 md:mr-6">
+        <h3 class="text-xl font-semibold mb-2 text-white">Elegant Display Shelf</h3>
+        <p class="text-gray-200">
+          Transform your living space with our Elegant Display Shelf. This beautifully crafted shelf not only serves as
+          a functional storage solution but also as a stunning piece of decor. Its sleek lines and modern design make it
+          a perfect fit for any room. Use it to showcase your favorite books, plants, or decorative items, and enjoy the
+          perfect blend of style and practicality.
+        </p>
       </div>
+      <div class="overflow-hidden rounded-lg shadow-lg md:w-1/2">
+        <img src="/Kitchen_6.JPG" alt="Elegant Display Shelf" class="w-full h-100 object-cover rounded-lg shadow-lg">
+      </div>
+    </div>
   </div>
 </div>
