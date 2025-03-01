@@ -1,10 +1,10 @@
 <div class="bg-product-section relative">
   <div class="absolute inset-0 bg-black opacity-80"></div> <!-- Overlay -->
-  <div class="container mx-auto py-8 relative z-10"> <!-- Ensure content is above overlay -->
+  <div class="container mx-auto py-8 relative z-10">
     <div class="flex flex-col md:flex-row items-center">
       <div class="md:w-1/2 overflow-hidden">
         <div class="relative w-full overflow-hidden">
-          <div #slider class="flex transition-transform duration-500">
+          <div #slider1 class="flex transition-transform duration-500">
             <div class="slide w-full flex-shrink-0">
               <img src="/Office_1.jpeg" alt="Image 1" class="max-w-[750px] h-100 object-cover">
             </div>
@@ -17,11 +17,11 @@
           </div>
 
           <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-transparent text-white p-2"
-            (click)="moveSlide(-1)">
+            (click)="moveSlide(-1, 'slider1')">
             &#10094;
           </button>
           <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-transparent text-white p-2"
-            (click)="moveSlide(1)">
+            (click)="moveSlide(1, 'slider1')">
             &#10095;
           </button>
         </div>
@@ -31,14 +31,14 @@
         <p class="text-gray-200">
           Create a professional and stylish workspace with our Elegant Office designs. Thoughtfully crafted for comfort and productivity, our offices feature modern layouts, high-quality materials, and smart storage solutions. Whether for a home office or corporate space, our designs offer the perfect blend of functionality and aesthetics to enhance your work environment.
         </p>
-    </div>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="bg-sc-product-section relative">
   <div class="absolute inset-0 bg-black opacity-80"></div> <!-- Overlay -->
-  <div class="container mx-auto py-8 relative z-10"> <!-- Ensure content is above overlay -->
+  <div class="container mx-auto py-8 relative z-10">
     <div class="flex flex-col md:flex-row items-center">
       <div class="md:w-1/2 md:mr-6">
         <h3 class="text-xl font-semibold mb-2 text-white">Elegant Display Shelf</h3>
@@ -49,8 +49,29 @@
           perfect blend of style and practicality.
         </p>
       </div>
-      <div class="overflow-hidden rounded-lg shadow-lg md:w-1/2">
-        <img src="/Kitchen_6.JPG" alt="Elegant Display Shelf" class="w-full h-100 object-cover rounded-lg shadow-lg">
+      <div class="md:w-1/2 overflow-hidden">
+        <div class="relative w-full overflow-hidden">
+          <div #slider2 class="flex transition-transform duration-500">
+            <div class="slide w-full flex-shrink-0">
+              <img src="/Kitchen_5.jpg" alt="Image 1" class="max-w-[750px] h-100 object-cover">
+            </div>
+            <div class="slide w-full flex-shrink-0">
+              <img src="/Kitchen_3.JPG" alt="Image 1" class="max-w-[750px] h-100 object-cover">
+            </div>
+            <div class="slide w-full flex-shrink-0">
+              <img src="/Kitchen_11.JPG" alt="Image 1" class="max-w-[750px] h-100 object-cover">
+            </div>  
+          </div>
+
+          <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-transparent text-white p-2"
+            (click)="moveSlide(-1, 'slider2')">
+            &#10094;
+          </button>
+          <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-transparent text-white p-2"
+            (click)="moveSlide(1, 'slider2')">
+            &#10095;
+          </button>
+        </div>
       </div>
     </div>
   </div>

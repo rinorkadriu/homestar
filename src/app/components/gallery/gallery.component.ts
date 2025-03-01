@@ -8,33 +8,28 @@ import { CommonModule } from '@angular/common';
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss',
 })
-export class GalleryComponent implements AfterViewInit {
+export class GalleryComponent {
 
-  slideIndex = 0;
-  @ViewChild('slider') slider!: ElementRef;
+  @ViewChild('slider1', { static: false }) slider1!: ElementRef;
+  @ViewChild('slider2', { static: false }) slider2!: ElementRef;
 
-  ngAfterViewInit() {
-    this.autoSlide();
-  }
+  private currentIndex1 = 0;
+  private currentIndex2 = 0;
 
-  autoSlide() {
-    setInterval(() => {
-      this.moveSlide(1); // Auto slide every 3 seconds
-    }, 20000);
-  }
-
-  moveSlide(n: number) {
-    const slides = document.getElementsByClassName("slide") as HTMLCollectionOf<HTMLElement>;
-    this.slideIndex += n;
-
-    if (this.slideIndex >= slides.length) {
-      this.slideIndex = 0;
+  moveSlide(direction: number, sliderId: string) {
+    const slider = sliderId === 'slider1' ? this.slider1 : this.slider2;
+    let currentIndex = sliderId === 'slider1' ? this.currentIndex1 : this.currentIndex2;
+    
+    if (slider) {
+      const totalSlides = slider.nativeElement.children.length;
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      slider.nativeElement.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      if (sliderId === 'slider1') {
+        this.currentIndex1 = currentIndex;
+      } else {
+        this.currentIndex2 = currentIndex;
+      }
     }
-    if (this.slideIndex < 0) {
-      this.slideIndex = slides.length - 1;
-    }
-
-    const offset = -this.slideIndex * 100; // Move by 100% width
-    (this.slider.nativeElement as HTMLElement).style.transform = `translateX(${offset}%)`;
   }
 }
