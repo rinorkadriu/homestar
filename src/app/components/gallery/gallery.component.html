@@ -10,7 +10,7 @@
             </div>
             <div class="slide w-full flex-shrink-0">
               <img src="/Office_3.jpg" alt="Image 1" class="max-w-[750px] h-100 object-cover">
-            </div>  
+            </div>
             <div class="slide w-full flex-shrink-0">
               <img src="/Shelf_4.jpeg" alt="Image 2" class="max-w-[750px] h-100 object-cover">
             </div>
@@ -29,7 +29,10 @@
       <div class="md:w-1/2 md:ml-6 mt-4 md:mt-0">
         <h3 class="text-xl font-semibold mb-2 text-white">Elegant Office</h3>
         <p class="text-gray-200">
-          Create a professional and stylish workspace with our Elegant Office designs. Thoughtfully crafted for comfort and productivity, our offices feature modern layouts, high-quality materials, and smart storage solutions. Whether for a home office or corporate space, our designs offer the perfect blend of functionality and aesthetics to enhance your work environment.
+          Create a professional and stylish workspace with our Elegant Office designs. Thoughtfully crafted for comfort
+          and productivity, our offices feature modern layouts, high-quality materials, and smart storage solutions.
+          Whether for a home office or corporate space, our designs offer the perfect blend of functionality and
+          aesthetics to enhance your work environment.
         </p>
       </div>
     </div>
@@ -41,12 +44,9 @@
   <div class="container mx-auto py-8 relative z-10">
     <div class="flex flex-col md:flex-row items-center">
       <div class="md:w-1/2 md:mr-6">
-        <h3 class="text-xl font-semibold mb-2 text-white">Elegant Display Shelf</h3>
+        <h3 class="text-xl font-semibold mb-2 text-white">Modern Kitchen Elegance</h3>
         <p class="text-gray-200">
-          Transform your living space with our Elegant Display Shelf. This beautifully crafted shelf not only serves as
-          a functional storage solution but also as a stunning piece of decor. Its sleek lines and modern design make it
-          a perfect fit for any room. Use it to showcase your favorite books, plants, or decorative items, and enjoy the
-          perfect blend of style and practicality.
+          Create a stylish and functional kitchen with our Modern Kitchen Elegance designs. Thoughtfully designed for efficiency and aesthetics, our kitchens feature high-quality materials, smart storage solutions, and sleek finishes. Whether you love cooking or entertaining guests, our modern layouts provide the perfect balance of convenience and sophistication. Elevate your culinary experience with a kitchen that blends beauty and practicality seamlessly.
         </p>
       </div>
       <div class="md:w-1/2 overflow-hidden">
@@ -60,7 +60,7 @@
             </div>
             <div class="slide w-full flex-shrink-0">
               <img src="/Kitchen_11.JPG" alt="Image 1" class="max-w-[750px] h-100 object-cover">
-            </div>  
+            </div>
           </div>
 
           <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-transparent text-white p-2"
@@ -72,6 +72,47 @@
             &#10095;
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-third-product-section relative">
+  <div class="absolute inset-0 bg-black opacity-80"></div>
+  <div class="container mx-auto py-8 relative z-10">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 overflow-hidden">
+        <div class="relative w-full overflow-hidden">
+          <div #slider3 class="flex transition-transform duration-500">
+            <div class="slide flex-shrink-0 doors">
+              <img src="/IMG_DOOR_3.jpg" alt="Image 1" class="max-w-[750px] h-100 object-cover">
+            </div>
+            <div class="slide flex-shrink-0 doors">
+              <img src="/Door_4.jpg" alt="Image 1" class="max-w-[750px] h-100 object-cover">
+            </div>
+            <div class="slide flex-shrink-0 doors">
+              <img src="/Door_3.jpg" alt="Image 2" class="max-w-[750px] h-100 object-cover">
+            </div>
+          </div>
+
+          <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-transparent text-white p-2"
+            (click)="moveSlide(-1, 'slider3')">
+            &#10094;
+          </button>
+          <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-transparent text-white p-2"
+            (click)="moveSlide(1, 'slider3')">
+            &#10095;
+          </button>
+        </div>
+      </div>
+      <div class="md:w-1/2 md:ml-6 mt-4 md:mt-0">
+        <h3 class="text-xl font-semibold mb-2 text-white">Elegant Office</h3>
+        <p class="text-gray-200">
+          Create a professional and stylish workspace with our Elegant Office designs. Thoughtfully crafted for comfort
+          and productivity, our offices feature modern layouts, high-quality materials, and smart storage solutions.
+          Whether for a home office or corporate space, our designs offer the perfect blend of functionality and
+          aesthetics to enhance your work environment.
+        </p>
       </div>
     </div>
   </div>

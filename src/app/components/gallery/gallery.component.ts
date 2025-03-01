@@ -9,27 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './gallery.component.scss',
 })
 export class GalleryComponent {
-
   @ViewChild('slider1', { static: false }) slider1!: ElementRef;
   @ViewChild('slider2', { static: false }) slider2!: ElementRef;
+  @ViewChild('slider3', { static: false }) slider3!: ElementRef;
 
-  private currentIndex1 = 0;
-  private currentIndex2 = 0;
+  private currentIndex = { slider1: 0, slider2: 0, slider3: 0 };
+  private slideWidth = 750; // Adjust this to match your image width
 
-  moveSlide(direction: number, sliderId: string) {
-    const slider = sliderId === 'slider1' ? this.slider1 : this.slider2;
-    let currentIndex = sliderId === 'slider1' ? this.currentIndex1 : this.currentIndex2;
-    
-    if (slider) {
-      const totalSlides = slider.nativeElement.children.length;
-      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-      slider.nativeElement.style.transform = `translateX(-${currentIndex * 100}%)`;
-      
-      if (sliderId === 'slider1') {
-        this.currentIndex1 = currentIndex;
-      } else {
-        this.currentIndex2 = currentIndex;
-      }
-    }
+  moveSlide(direction: number, sliderName: 'slider1' | 'slider2' | 'slider3') {
+    this.currentIndex[sliderName] = (this.currentIndex[sliderName] + direction + 3) % 3;
+    this[sliderName].nativeElement.style.transform = `translateX(-${this.currentIndex[sliderName] * this.slideWidth}px)`;
   }
 }
