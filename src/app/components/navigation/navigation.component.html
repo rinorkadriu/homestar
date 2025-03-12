@@ -54,21 +54,22 @@
     <div class="md:hidden fixed left-0 right-0 top-[60px] z-10" [class.block]="isMenuOpen" [class.hidden]="!isMenuOpen">
       <div class="bg-lowBlack shadow-lg">
         <div class="py-2">
-          <a routerLink="/" routerLinkActive="nav-active" [routerLinkActiveOptions]="{exact: true}"
-            class="block px-6 py-3 text-highWhite">
-            Ballina
+          <a routerLink="/" routerLinkActive="nav-active"
+            class="block px-6 py-3 text-highWhite" (click)="scrollToSection('home')"
+            [routerLinkActiveOptions]="{exact: true}">
+            Home
           </a>
-          <a routerLink="/services" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite">
-            Rreth nesh
+          <a routerLink="/services" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite" (click)="scrollToSection('services')">
+            Services
           </a>
-          <a routerLink="/about" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite">
-            Personeli
+          <a routerLink="/about" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite" (click)="scrollToSection('about')">
+            About
           </a>
-          <a routerLink="/contact" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite">
-            Sherbimet
+          <a routerLink="/gallery" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite" (click)="scrollToSection('gallery')">
+            Gallery
           </a>
-          <a routerLink="/kontakt" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite">
-            Kontakti
+          <a routerLink="/contact" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite" (click)="scrollToSection('contact')">
+            Contact
           </a>
         </div>
       </div>

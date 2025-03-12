@@ -17,7 +17,10 @@ export class GalleryComponent {
   private slideWidth = 750; // Adjust this to match your image width
 
   moveSlide(direction: number, sliderName: 'slider1' | 'slider2' | 'slider3') {
+    const sliderElement = this[sliderName].nativeElement;
+    this.slideWidth = sliderElement.clientWidth; // Get actual width
     this.currentIndex[sliderName] = (this.currentIndex[sliderName] + direction + 3) % 3;
-    this[sliderName].nativeElement.style.transform = `translateX(-${this.currentIndex[sliderName] * this.slideWidth}px)`;
+    sliderElement.style.transform = `translateX(-${this.currentIndex[sliderName] * this.slideWidth}px)`;
   }
+  
 }
