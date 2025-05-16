@@ -3,24 +3,28 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center">
             <!-- Product 1 -->
             <div class="product-card relative w-full group">
-           <div class="aspect-[6/7] bg-lowBlack rounded-lg overflow-hidden relative">
-               <div class="w-full h-full p-6 relative">
-                   <img src="/Door_4.jpg" alt="Dhoma e gjumit"
-                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-               </div>
-               <div class="absolute bottom-4 left-4 right-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                   <span class="inline-block px-3 py-1 bg-highBrown text-white text-sm rounded-full">New Arrival</span>
-               </div>
-           </div>
-           <div class="text-center mt-3 space-y-1">
-               <p class="text-xl font-medium font-montserrat">Door</p>
-               <div class="text-highBrown text-base flex items-center justify-center space-x-2">
-                   <span class="line-through text-gray-500">Expensive</span>
-                   <span>Cheap</span>
-               </div>
-           </div>
-       </div>
+                <div class="aspect-[6/7] bg-lowBlack rounded-lg overflow-hidden relative">
+                    <div class="w-full h-full p-6 relative">
+                        <img src="/Door_4.jpg" alt="Dhoma e gjumit"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 right-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <span class="inline-block px-3 py-1 bg-highBrown text-white text-sm rounded-full">New
+                            Arrival</span>
+                    </div>
+                </div>
+                <div class="text-center mt-3 space-y-1">
+                    <p class="text-xl font-medium font-montserrat">Door</p>
+                    <div class="text-highBrown text-base flex items-center justify-center space-x-2">
+                        <span class="line-through text-gray-500">Expensive</span>
+                        <span>Cheap</span>
+                    </div>
+                </div>
+            </div>
 
             <!-- Product 2 -->
             <div class="product-card relative w-full group">
@@ -51,7 +55,9 @@
             <div class="text-left space-y-4 lg:pl-8 home-star-section">
                 <h2 class="text-6xl font-light">HomeStar</h2>
                 <p class="text-gray-400 text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec quam sed mi facilisis pharetra.
+                    Discover timeless elegance with HomeStar’s exquisite collection of furniture and home décor. From
+                    modern minimalism to classic luxury, we offer premium-quality designs that transform any space into
+                    a masterpiece
                 </p>
                 <div class="grid grid-cols-2 gap-4 mt-6">
                     <div class="text-left">
@@ -71,7 +77,9 @@
             <div class="text-left space-y-4 lg:pl-8 home-star-section">
                 <h2 class="text-6xl font-light">HomeStar</h2>
                 <p class="text-gray-400 text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec quam sed mi facilisis pharetra.
+                    At HomeStar, we bring elegance and functionality to your spaces with premium-quality furniture and
+                    décor. Whether you are furnishing your bedroom, office, or living space, our expertly crafted
+                    designs ensure comfort and style.
                 </p>
                 <div class="grid grid-cols-2 gap-4 mt-6">
                     <div class="text-left">
@@ -135,5 +143,99 @@
                 </div>
             </div>
         </div>
+
+        <!-- Section Header -->
+        <div class="text-center mt-12">
+            <h2 class="text-4xl font-bold text-highWhite">✨ Discover Our Premium Collection</h2>
+            <p class="text-gray-300 mt-2 text-lg mx-auto">
+                Handpicked designs that blend elegance, comfort, and functionality for your modern lifestyle.
+            </p>
+        </div>
+
+        <!-- Card Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-16 px-4 sm:px-8">
+            <div *ngFor="let card of cards"
+                class="relative group cursor-pointer transition-transform duration-300 transform hover:scale-105"
+                (click)="openModal(card)">
+                <div
+                    class="bg-gradient-to-br from-[#1e1e1e] to-[#111] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
+                    <!-- Image -->
+                    <div class="relative h-52">
+                        <img [src]="card.imageUrl" [alt]="card.title" class="w-full h-full object-cover" />
+                        <!-- Badge -->
+                        <span *ngIf="card.badge"
+                            class="absolute top-3 left-3 bg-gradient-to-r from-pink-500 to-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
+                            {{ card.badge }}
+                        </span>
+                        <!-- Rating -->
+                        <div
+                            class="absolute bottom-3 right-3 bg-black/70 text-yellow-400 text-sm px-2 py-1 rounded-lg flex items-center gap-1">
+                            ★ {{ card.rating }}/5
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-5 text-highWhite space-y-2">
+                        <h3 class="text-xl font-semibold">{{ card.title }}</h3>
+                        <p class="text-gray-400 text-sm">{{ card.subtitle }}</p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span *ngFor="let tag of card.tags"
+                                class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
+                                {{ tag }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Hover overlay -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
+                        <span class="text-white text-sm bg-black/60 px-3 py-1 rounded-full">
+                            Tap to view details
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Backdrop -->
+        <div *ngIf="showModal"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+            <!-- Modal Container -->
+            <div
+                class="bg-white/90 backdrop-blur-md shadow-2xl rounded-2xl max-w-3xl w-full overflow-hidden animate-fadeInScale relative">
+                <!-- Close Button -->
+                <button (click)="closeModal()"
+                    class="absolute top-4 right-4 text-highBrown hover:text-black text-3xl font-bold transition-transform hover:scale-110"
+                    aria-label="Close">
+                    ×
+                </button>
+
+                <!-- Image Section: bigger, full width -->
+                <div class="w-full h-96 overflow-hidden rounded-t-2xl">
+                    <img [src]="selectedCard?.imageUrl" [alt]="selectedCard?.title"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <div class="p-6 text-center text-gray-800 relative">
+                    <!-- Background subtle pattern or shape -->
+                    <div
+                      class="absolute inset-x-1/4 top-0 h-16 bg-gradient-to-r from-purple-300 via-pink-300 to-red-300 opacity-20 rounded-full blur-xl -z-10"
+                    ></div>
+                  
+                    <!-- Paragraph with a cool underline animation -->
+                    <p
+                      class="text-lg italic max-w-xl mx-auto leading-relaxed text-gray-900 relative inline-block cursor-default"
+                    >
+                      {{ selectedCard?.subtitle || 'Experience the comfort and style with our handpicked designs.' }}
+                      <span
+                        class="block h-1 w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-full mt-1 scale-x-0 origin-left transition-transform duration-500 ease-in-out hover:scale-x-100"
+                      ></span>
+                    </p>
+                  </div>
+                  
+                  
+            </div>
+        </div>
     </div>
+
 </div>
