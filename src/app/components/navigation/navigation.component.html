@@ -23,10 +23,10 @@
           [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">
           About
         </a>
-        <!-- <a routerLink="/contact" (click)="scrollToSection('gallery')" routerLinkActive="nav-active font-bold"
+        <a routerLink="/testiomional" (click)="scrollToSection('testiomional')" routerLinkActive="nav-active font-bold"
           class="hover:text-lightBrown text-highWhite no-underline relative transition-colors duration-200"
-          [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">Gallery</a> -->
-        <a routerLink="/kontakt" (click)="scrollToSection('contact')" routerLinkActive="nav-active font-bold"
+          [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">Testimonial</a>
+        <a routerLink="/kontakt" (click)="scrollToSection('testiomional')" routerLinkActive="nav-active font-bold"
           class="hover:text-lightBrown text-highWhite no-underline relative transition-colors duration-200"
           [ngClass]="{'text-lowBlack': isScrolled, 'text-highWhite': !isScrolled}">Contact</a>
       </div>
@@ -68,6 +68,9 @@
           <!-- <a routerLink="/gallery" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite" (click)="scrollToSection('gallery')">
             Gallery
           </a> -->
+          <a routerLink="/testiomional" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite" (click)="scrollToSection('testiomional')">
+            Testimonial
+          </a>
           <a routerLink="/contact" routerLinkActive="nav-active" class="block px-6 py-3 text-highWhite" (click)="scrollToSection('contact')">
             Contact
           </a>
