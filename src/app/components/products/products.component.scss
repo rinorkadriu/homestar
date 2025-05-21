@@ -58,3 +58,23 @@
     overflow-y: auto;
   }
   
+  p.relative {
+    position: relative;
+    padding-bottom: 6px;
+  }
+  
+  p span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 9999px;
+    width: 0;
+    transition: width 0.7s ease-in-out;
+    /* Gradient applied inline for easier theming */
+  }
+  
+  p span.w-full {
+    width: 100%;
+  }
+  
